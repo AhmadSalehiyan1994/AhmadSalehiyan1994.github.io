@@ -894,7 +894,7 @@ object-fit: contain;
 
     position: absolute;
     right: 200px;
-    left: 150px;
+
     top: 40px;
   }
   
@@ -904,7 +904,7 @@ object-fit: contain;
     font-weight: bold;
     font-size: 13px;
     position: absolute;
-    right: 200px;
+   
     left: 150px;
     top: 80px;
   }
