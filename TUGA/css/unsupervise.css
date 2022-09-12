@@ -1,0 +1,734 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.dark {
+  background: #110f16;
+}
+
+.line {
+  display: block;
+  place-items: center;
+  height: 1px;
+  border: 0;
+  border-top: 4px solid white;
+  margin: 1em 0;
+  padding-left: 1rem;
+}
+
+.first {
+  margin-top: 50px;
+  background: #26263f;
+  height: 25vw;
+  position: relative;
+}
+
+.first .page_image {
+  position: absolute;
+  height: 25vw;
+  padding: 0px;
+  opacity: 0.3;
+  width: 100%;
+  z-index: 1;
+
+
+}
+
+.first .page_content_1 {
+  position: absolute;
+  top: 2.5vw;
+  left: 2%;
+  font-size: 3.5vw;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(202, 244, 252);
+  z-index: 2;
+}
+.first .page_content_2 {
+  position: absolute;
+  top: 270px;
+  left: 2%;
+  font-size: 2vw;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(246, 246, 246);
+  z-index: 2;
+}
+.first .page_content_3 {
+  position: absolute;
+  top: 340px;
+  left: 2%;
+  font-size: 2vw;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(246, 246, 246);
+  z-index: 2;
+}
+
+
+hr{
+  color: rgb(255, 255, 255);
+}
+
+.second {
+  margin-top: 3vw;
+
+}
+.second .thesis_uni_image { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+
+}
+.second .thesis_uni {
+  color: #FFF;
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1vw;
+  text-align: center;
+  font-style: bold;
+
+}
+
+.second .thesis_title {
+  color: rgb(200, 140, 36);
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.6vw;
+  text-align: center;
+  font-style: bold;
+
+}
+.second .thesis_name {
+  color: #FFF;
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.6vw;
+  text-align: center;
+  font-style: bold;
+  
+}
+
+.second .thesis_Supervisor {
+  color: rgb(200, 140, 36);
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.6vw;
+  text-align: center;
+  font-style: bold;
+  
+}
+
+.second .thesis_Prof {
+  color: #FFF;
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.6vw;
+  text-align: center;
+  font-style: bold;
+  
+}
+.second .thesis_details {
+  color: #FFF;
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.6vw;
+  text-align: center;
+  font-style: bold;
+  
+}
+
+.second .header_First {
+  padding: 3px;
+  border-radius: 5px;
+  display: inline;
+  color: #000;
+  background-color: #FFFF00;
+  font-size: 35px;
+
+  margin-top: 20px;
+}
+.second .header_Second {
+  border-radius: 5px;
+  display: inline;
+  color: black;
+  background-color: #FF0000;
+  font-size: 35px;
+  margin-top: 20px;
+}
+.second .header {
+  color: rgb(200, 140, 36);
+ 
+  font-size: 2.5vw;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.second .page_image {
+  position: absolute;
+  height: 20vw;
+  right: 0px;
+}
+
+
+.second .Methodology_image_div {
+ margin: 100px;
+}
+
+.second .Methodology_image {
+
+  width: 100%;
+  height: auto;
+  overflow:scroll;
+}
+.second .Scheduled_image {
+
+  width: 60%;
+  height: auto;
+
+}
+.second .equ1 {
+
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.second .equ2 {
+  padding-top: 170px;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.second .list_parameter {
+  color: rgb(249, 249, 249);
+  font-size: 1vw;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  
+
+}
+
+.second .Parameter_1 {
+  color: rgb(0, 172, 175);
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  
+
+}
+.second .fw-bold {
+  color: rgb(228, 231, 53);
+  font-size: 1vw;
+  font-style: italic;
+  
+
+}
+
+.second .context {
+  margin-top: 20px;
+  font-family: sans-serif, "Helvetica Neue", Helvetica;
+  font-size: 1.5vw;
+  text-align: justify;
+}
+
+.second ul {
+  color: #FFF;
+  font-size: 1.5vw;
+  font-style: italic;
+  text-align: justify;
+}
+.second .header_key{
+  color: rgb(200, 140, 36);
+  font-size: 1.5vw;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.second .list_sotware{
+   columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.second strong {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 1.5vw;
+  text-align: justify;
+}
+
+.second .card-text {
+  font-size: 1.5vw;
+  text-align: justify;
+}
+.second .section_our_solution .row {
+  align-items: center;
+  
+       }
+
+.second .our_solution_category {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.second .our_solution_category .solution_cards_box {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.second .solution_cards_box .solution_card {
+
+flex: 0 80%;
+background: #fff;
+box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+0 5px 15px 0 rgba(37, 44, 97, 0.15);
+border-radius: 15px;
+margin: 8px;
+padding: 10px 15px;
+
+z-index: 1;
+min-height: 600px;
+
+}
+
+
+
+
+.second .solution_card .solu_title h3 {
+  color: #212121;
+  font-size: 20px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+ font-weight: bold;
+  }
+
+
+
+
+.second .solution_cards_box .solution_card:before {
+content: "";
+position: absolute;
+background: rgb(85 108 214 / 5%);
+width: 170px;
+height: 500px;
+z-index: -1;
+transform: rotate(42deg);
+right: -56px;
+top: -23px;
+border-radius: 35px;
+}
+
+.second .solution_cards_box .solution_card:hover .solu_description button {
+background: #fff !important;
+color: #309df0;
+}
+
+
+
+
+.second .solution_card .solu_description .card_description_time {
+color: rgb(31, 2, 134);
+font-size: 15px;
+margin-bottom: 15px;
+}
+
+.second .solution_card .solu_description .card_description_Abstract {
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  margin-bottom: 5px;
+  text-align: justify;
+  }
+  .second .solution_card .solu_description .context_key_1 {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+  /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (max-width: 600px) {
+  .second .solution_card .solu_description .card_description_Abstract {
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    margin-bottom: 5px;
+    text-align: justify;
+  }
+
+  .second .solution_cards_box .solution_card {
+
+    flex: 0 80%;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 10px 15px;
+    
+    z-index: 1;
+    min-height: 470px;
+    
+    }
+    .second .solution_card .solu_description .context_key_1 {
+      color: rgb(0, 0, 0);
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-align: justify;
+  }
+  .second .context {
+    margin-top: 20px;
+    font-family: sans-serif, "Helvetica Neue", Helvetica;
+    font-size: 20px;
+    text-align: justify;
+  }
+  .second .header_First {
+    padding: 3px;
+    border-radius: 5px;
+    display: inline;
+    color: #000;
+    background-color: #FFFF00;
+    font-size: 27px;
+  
+    margin-top: 20px;
+  }
+  .second .header_Second {
+    border-radius: 5px;
+    display: inline;
+    color: black;
+    background-color: #FF0000;
+    font-size: 27px;
+    margin-top: 20px;
+  }
+  .second .list_sotware{
+    font-size: 15px;
+    columns: 1 ;
+   -webkit-columns: 1;
+   -moz-columns: 1;
+   text-align: justify;
+ }
+ .second .list_parameter {
+  color: rgb(249, 249, 249);
+  font-size:  15px;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  
+
+}
+.second .fw-bold {
+  color: rgb(228, 231, 53);
+  font-size: 15px;
+  font-style: italic;
+  
+
+}
+.second .Parameter_1 {
+  color: rgb(0, 172, 175);
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  
+
+}
+.second .header {
+  color: rgb(200, 140, 36);
+ 
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.second .Scheduled_image {
+
+  width: 100%;
+  height: auto;
+
+}
+
+
+}
+
+.second .code_link {
+  font-style: italic
+}
+
+.second .our_solution_content h1 {
+text-transform: capitalize;
+margin-bottom: 1rem;
+font-size: 2.5rem;
+}
+
+.second .hover_color_bubble {
+position: absolute;
+background: rgb(54 81 207 / 10%);
+width: 100rem;
+height: 100rem;
+left: 0;
+right: 0;
+z-index: -1;
+top: 16rem;
+border-radius: 50%;
+transform: rotate(-36deg);
+left: -18rem;
+transition: 0.7s;
+}
+
+.second .solution_cards_box .solution_card:hover .hover_color_bubble {
+top: 0rem;
+}
+
+.second .solution_cards_box .solution_card .so_top_icon {
+width: 120px;
+height: auto;
+border-radius: 10%;
+background: #fff;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.second .solution_cards_box .solution_card .so_top_icon img {
+width: 120px;
+height: auto;
+
+object-fit: contain;
+}
+
+/*start media query*/
+@media screen and (min-width: 320px) {
+            .sol_card_top_3 {
+              position: relative;
+              top: 0;
+            }
+          
+            .our_solution_category {
+              width: 100%;
+              height: 100%;;
+              margin: 0 auto;
+             
+            }
+          
+            .our_solution_category .solution_cards_box {
+              flex: auto;
+            }
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .our_solution_category .solution_cards_box {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sol_card_top_3 {
+    position: relative;
+    top: -3rem;
+  }
+
+}
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #2d2c2c;
+  /*Pen code from this point on*/
+  /*Telegram*/
+  /*WhatsApp*/
+  /*LinkedIn*/
+}
+
+.footer #social-platforms {
+  top: 100px;
+  font-size: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer .btn {
+  clear: both;
+  white-space: nowrap;
+  font-size: .8em;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  margin: 2px;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.footer .btn:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+
+.footer .btn:focus {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.footer .btn > span, .footer .btn-icon > i {
+  float: left;
+  padding: 13px;
+  transition: all .5s;
+  line-height: 1em;
+}
+
+.footer .btn > span {
+  padding: 14px 18px 16px;
+  white-space: nowrap;
+  color: #FFF;
+  background: #b8b8b8;
+}
+
+.footer .btn:focus > span {
+  background: #9a9a9a;
+}
+
+.footer .btn-icon > i {
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  width: 40px;
+  text-align: center;
+  font-size: 1.25em;
+  color: #fff;
+  background: #212121;
+}
+
+.footer .btn-icon > i:after {
+  content: "";
+  border: 8px solid;
+  border-color: transparent transparent transparent #222;
+  position: absolute;
+  top: 13px;
+  right: -15px;
+}
+
+.footer .btn-icon:hover > i, .footer .btn-icon:focus > i {
+  color: #FFF;
+}
+
+.footer .btn-icon > span {
+  border-radius: 0 5px 5px 0;
+}
+
+.footer .btn-telegram:hover > i, .footer .btn-facebook:focus > i {
+  color: #229ED9;
+}
+
+.footer .btn-telegram > span {
+  background: #229ED9;
+}
+
+.footer .btn-whatsApp:hover > i, .footer .btn-twitter:focus > i {
+  color: #25D366;
+}
+
+.footer .btn-whatsApp > span {
+  background: #25D366;
+}
+
+.footer .btn-linkedin:hover > i, .footer .btn-linkedin:focus > i {
+  color: #007bb6;
+}
+
+.footer .btn-linkedin > span {
+  background: #007bb6;
+}
+
+.footer .text_contact {
+  display: block;
+  font-size: 30px;
+  color: whitesmoke;
+  padding-left: 40px;
+  padding-top: 20px;
+  top: 80px;
+}
+
+.footer .contact_ican_email {
+  padding-left: 100px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: whitesmoke;
+  display: block;
+}
+
+.footer .contact_ican_call {
+  padding-left: 100px;
+  font-size: 20px;
+  color: whitesmoke;
+  display: block;
+}
+
+.footer .copy {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer .contact {
+  display: block;
+  font-size: 30px;
+  color: whitesmoke;
+  padding-left: 40px;
+  padding-top: 20px;
+  top: 80px;
+}
+
+.footer .f-about {
+  position: absolute;
+  top: 10px;
+}
+
+.footer .f_name {
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  right: 200px;
+  left: 150px;
+  top: 40px;
+}
+
+.footer .f_job {
+  display:flex;
+  color: #d9d6d6;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+  right: 200px;
+  left: 150px;
+  top: 95px;
+}
+
+.footer .contact_about_card {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  justify-content: center;
+  justify-self: center;
+  background-color: #212428;
+  border-radius: 10px;
+  box-shadow: var(--shadow-1);
+  height: 115px;
+  width: 110px;
+}
+
+.footer .contact_image {
+  height: 110px;
+  width: 105px;
+}
+
+.footer .f_text {
+  position: relative;
+  color: rgba(174, 174, 174, 0.937);
+  text-align: justify;
+  text-justify: inter-word;
+  top: 0px;
+}
+/*# sourceMappingURL=unsupervise.css.map */
