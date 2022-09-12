@@ -175,7 +175,8 @@ html, body {
   height: 50px;
   width: 50px;
 }
-.first .icon_cv {
+.first .icon_
+{
   position: absolute;
   display: flex;
   height: 65px;
@@ -289,8 +290,8 @@ html, body {
     display: flex;
     height: 50px;
     width: 50px;
-    left: 305px;
-    top: 455px;
+    left: 382px;
+    top: 433px;
   
    
   }
