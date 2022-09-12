@@ -1,0 +1,609 @@
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+java&plugins=line-highlight+line-numbers+show-invisibles+autolinker+wpd+custom-class+file-highlight+toolbar+highlight-keywords+remove-initial-line-feed+autoloader+unescaped-markup+command-line+normalize-whitespace+keep-markup+data-uri-highlight */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+     color: black;
+     background: none;
+     text-shadow: 0 1px white;
+     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: normal;
+     line-height: 1.0; /* 1.5; */
+ 
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+ 
+     -webkit-hyphens: none;
+     -moz-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+ }
+ 
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+     text-shadow: none;
+     background: #b3d4fc;
+ }
+ 
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+     text-shadow: none;
+     background: #b3d4fc;
+ }
+ 
+ @media print {
+     code[class*="language-"],
+     pre[class*="language-"] {
+         text-shadow: none;
+     }
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+     padding: 1em;
+     margin: .5em 0;
+     overflow: auto;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {	/*background: #f5f2f0;*/
+     background-color: #F4F6FA;    /* redefined for gams syntax */
+     border: .5px solid #D8DFEE;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+     padding: .1em;
+     border-radius: .3em;
+     white-space: normal;
+ }
+ 
+ .token.starcomment,
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     color: slategray;
+ }
+ 
+ .token.punctuation {
+     color: #999;
+ }
+ 
+ .namespace {
+     opacity: .7;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.boolean,
+ .token.number,
+ .token.constant,
+ .token.deleted {
+     color: #905;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+    font-size: 3vw;
+     color: #690;
+     text-decoration: underline blue;
+ }
+ 
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string {
+     color: #a67f59;
+     background: hsla(0, 0%, 100%, .5);
+ }
+ 
+ .token.atrule,
+ .token.attr-value {
+     color: #07a;
+ }
+ 
+ .token.function {
+     color: #DD4A68;
+ }
+ 
+ .token.regex,
+ .token.important,
+ .token.variable {
+     color: #e90;
+ }
+ 
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+ .token.italic {
+     font-style: italic;
+ }
+ 
+ .token.entity {
+     cursor: help;
+ }
+ 
+ pre[data-line] {
+     position: relative;
+     padding: 1em 0 1em 3em;
+ }
+ 
+ .line-highlight {
+     position: absolute;
+     left: 0;
+     right: 0;
+     padding: inherit 0;
+     margin-top: 1em; /* Same as .prismâ€™s padding-top */
+ 
+     background: hsla(24, 20%, 50%,.08);
+     background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+ 
+     pointer-events: none;
+ 
+     line-height: inherit;
+     white-space: pre;
+ }
+ 
+     .line-highlight:before,
+     .line-highlight[data-end]:after {
+         content: attr(data-start);
+         position: absolute;
+         top: .4em;
+         left: .6em;
+         min-width: 1em;
+         padding: 0 .5em;
+         background-color: hsla(24, 20%, 50%,.4);
+         color: hsl(24, 20%, 95%);
+         font: bold 65%/1.5 sans-serif;
+         text-align: center;
+         vertical-align: .3em;
+         border-radius: 999px;
+         text-shadow: none;
+         box-shadow: 0 1px white;
+     }
+ 
+     .line-highlight[data-end]:after {
+         content: attr(data-end);
+         top: auto;
+         bottom: .4em;
+     }
+ 
+ pre.line-numbers {
+     position: relative;
+     padding-left: 3.8em;
+     counter-reset: linenumber;
+ }
+ 
+ pre.line-numbers > code {
+     position: relative;
+ }
+ 
+ .line-numbers .line-numbers-rows {
+     position: absolute;
+     pointer-events: none;
+     top: 0;
+     font-size: 100%;
+     left: -3.8em;
+     width: 3em; /* works for line-numbers below 1000 lines */
+     letter-spacing: -1px;
+     border-right: 1px solid #999;
+ 
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ 
+ }
+ 
+     .line-numbers-rows > span {
+         pointer-events: none;
+         display: block;
+         counter-increment: linenumber;
+     }
+ 
+         .line-numbers-rows > span:before {
+             content: counter(linenumber);
+             color: #999;
+             display: block;
+             padding-right: 0.8em;
+             text-align: right;
+         }
+ .token.tab:not(:empty),
+ .token.cr,
+ .token.lf,
+ .token.space {
+     position: relative;
+ }
+ 
+ .token.tab:not(:empty):before,
+ .token.cr:before,
+ .token.lf:before,
+ .token.space:before {
+     color: hsl(24, 20%, 85%);
+     position: absolute;
+ }
+ 
+ .token.tab:not(:empty):before {
+     content: '\21E5';
+ }
+ 
+ .token.cr:before {
+     content: '\240D';
+ }
+ 
+ .token.crlf:before {
+     content: '\240D\240A';
+ }
+ .token.lf:before {
+     content: '\240A';
+ }
+ 
+ .token.space:before {
+     content: '\00B7';
+ }
+ .token a {
+     color: inherit;
+ }
+ code[class*="language-"] a[href],
+ pre[class*="language-"] a[href] {
+     cursor: help;
+     text-decoration: none;
+ }
+ 
+ code[class*="language-"] a[href]:hover,
+ pre[class*="language-"] a[href]:hover {
+     cursor: help;
+     text-decoration: underline;
+ }
+ pre.code-toolbar {
+     position: relative;
+ }
+ 
+ pre.code-toolbar > .toolbar {
+     position: absolute;
+     top: .3em;
+     right: .2em;
+     transition: opacity 0.3s ease-in-out;
+     opacity: 0;
+ }
+ 
+ pre.code-toolbar:hover > .toolbar {
+     opacity: 1;
+ }
+ 
+ pre.code-toolbar > .toolbar .toolbar-item {
+     display: inline-block;
+ }
+ 
+ pre.code-toolbar > .toolbar a {
+     cursor: pointer;
+ }
+ 
+ pre.code-toolbar > .toolbar button {
+     background: none;
+     border: 0;
+     color: inherit;
+     font: inherit;
+     line-height: normal;
+     overflow: visible;
+     padding: 0;
+
+ }
+ 
+ pre.code-toolbar > .toolbar a,
+ pre.code-toolbar > .toolbar button,
+ pre.code-toolbar > .toolbar span {
+     color: #bbb;
+     font-size: .8em;
+     padding: 0 .5em;
+     background: #f5f2f0;
+     background: rgba(224, 224, 224, 0.2);
+     box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+     border-radius: .5em;
+ }
+ 
+ pre.code-toolbar > .toolbar a:hover,
+ pre.code-toolbar > .toolbar a:focus,
+ pre.code-toolbar > .toolbar button:hover,
+ pre.code-toolbar > .toolbar button:focus,
+ pre.code-toolbar > .toolbar span:hover,
+ pre.code-toolbar > .toolbar span:focus {
+     color: inherit;
+     text-decoration: none;
+ }
+ 
+ /* Fallback, in case JS does not run, to ensure the code is at least visible */
+ .lang-markup script[type='text/plain'],
+ .language-markup script[type='text/plain'],
+ script[type='text/plain'].lang-markup,
+ script[type='text/plain'].language-markup {
+     display: block;
+     font: 100% Consolas, Monaco, monospace;
+     white-space: pre;
+     overflow: auto;
+ }
+ 
+ .command-line-prompt {
+     border-right: 1px solid #999;
+     display: block;
+     float: left;
+     font-size: 100%;
+     letter-spacing: -1px;
+     margin-right: 1em;
+     pointer-events: none;
+ 
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+ 
+ .command-line-prompt > span:before {
+     color: #999;
+     content: ' ';
+     display: block;
+     padding-right: 0.8em;
+ }
+ 
+ .command-line-prompt > span[data-user]:before {
+     content: "[" attr(data-user) "@" attr(data-host) "] $";
+ }
+ 
+ .command-line-prompt > span[data-user="root"]:before {
+     content: "[" attr(data-user) "@" attr(data-host) "] #";
+ }
+ 
+ .command-line-prompt > span[data-prompt]:before {
+     content: attr(data-prompt);
+ }
+ 
+ /* defined for gams syntax */
+ .token.gmstitle    { color: #254117; }
+ 
+ .token.qstring     { color: #6960EC; /* SkyBlue */ }
+ .token.dollar, .token.punctuation {
+     color: #806517; /* Oak Brown */
+ }
+ .token.dollarcmd_name, .token.dollarif  {
+     color: #800080; /* Purple */
+ }
+ .token.keyword, .token.solve_name, .token.file_name {
+     color: #8B0000  /* DarkRed */
+ }
+ .token.symb_name, .token.alias_name, .token.tab_name  {
+     color: blue; /* #6960EC; /* Blue Lotus */
+ }
+ .token.symb_element, .token.file_element, .token.tab_element {
+     color: #006400;
+ }
+ 
+ .token.option_name { color: #1E90FF; /* DodgerBlue */ }
+ .token.opt         { color: #FA8072; /* Salmon */ }
+ 
+ .token.solve_obj     { color: #A0522D;  /* Sienna */  }
+ .token.solve_using   { color: #556B2F;  /* DarkOliveGreen */}
+ .token.solve_modtype { color: #6A5ACD;  /* SlateBlue */}
+ 
+ .token.equ_operator { color: #4B0082; /* Indigo */ }
+ 
+ .token.embed { color: #483C32;  }
+ .token.embed_python { color: #527D1A; }
+ .token.embed_start { color: #461B7E; }
+ 
+
+
+/* Footer */
+.footer {
+    background-color: #2d2c2c;
+    /*Pen code from this point on*/
+    /*Telegram*/
+    /*WhatsApp*/
+    /*LinkedIn*/
+  }
+  
+  .footer #social-platforms {
+    top: 100px;
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .footer .btn {
+    clear: both;
+    white-space: nowrap;
+    font-size: .8em;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+    margin: 2px;
+    transition: all .5s;
+    overflow: hidden;
+  }
+  
+  .footer .btn:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+  }
+  
+  .footer .btn:focus {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  .footer .btn > span, .footer .btn-icon > i {
+    float: left;
+    padding: 13px;
+    transition: all .5s;
+    line-height: 1em;
+  }
+  
+  .footer .btn > span {
+    padding: 14px 18px 16px;
+    white-space: nowrap;
+    color: #FFF;
+    background: #b8b8b8;
+  }
+  
+  .footer .btn:focus > span {
+    background: #9a9a9a;
+  }
+  
+  .footer .btn-icon > i {
+    border-radius: 5px 0 0 5px;
+    position: relative;
+    width: 40px;
+    text-align: center;
+    font-size: 1.25em;
+    color: #fff;
+    background: #212121;
+  }
+  
+  .footer .btn-icon > i:after {
+    content: "";
+    border: 8px solid;
+    border-color: transparent transparent transparent #222;
+    position: absolute;
+    top: 13px;
+    right: -15px;
+  }
+  
+  .footer .btn-icon:hover > i, .footer .btn-icon:focus > i {
+    color: #FFF;
+  }
+  
+  .footer .btn-icon > span {
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .footer .btn-telegram:hover > i, .footer .btn-facebook:focus > i {
+    color: #229ED9;
+  }
+  
+  .footer .btn-telegram > span {
+    background: #229ED9;
+  }
+  
+  .footer .btn-whatsApp:hover > i, .footer .btn-twitter:focus > i {
+    color: #25D366;
+  }
+  
+  .footer .btn-whatsApp > span {
+    background: #25D366;
+  }
+  
+  .footer .btn-linkedin:hover > i, .footer .btn-linkedin:focus > i {
+    color: #007bb6;
+  }
+  
+  .footer .btn-linkedin > span {
+    background: #007bb6;
+  }
+  
+  .footer .text_contact {
+    display: block;
+    font-size: 30px;
+    color: whitesmoke;
+    padding-left: 40px;
+    padding-top: 20px;
+    top: 80px;
+  }
+  
+  .footer .contact_ican_email {
+    padding-left: 100px;
+    padding-top: 30px;
+    font-size: 20px;
+    color: whitesmoke;
+    display: block;
+  }
+  
+  .footer .contact_ican_call {
+    padding-left: 100px;
+    font-size: 20px;
+    color: whitesmoke;
+    display: block;
+  }
+  
+  .footer .copy {
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer .contact {
+    display: block;
+    font-size: 30px;
+    color: whitesmoke;
+    padding-left: 40px;
+    padding-top: 20px;
+    top: 80px;
+  }
+  
+  .footer .f-about {
+    position: absolute;
+    top: 10px;
+  }
+  
+  .footer .f_name {
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: 200px;
+    left: 150px;
+    top: 40px;
+  }
+  
+  .footer .f_job {
+    display:flex;
+    color: #d9d6d6;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    right: 200px;
+    left: 150px;
+    top: 95px;
+  }
+  
+  .footer .contact_about_card {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    justify-content: center;
+    justify-self: center;
+    background-color: #212428;
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
+    height: 115px;
+    width: 110px;
+  }
+  
+  .footer .contact_image {
+    height: 110px;
+    width: 105px;
+  }
+  
+  .footer .f_text {
+    position: relative;
+    color: rgba(174, 174, 174, 0.937);
+    text-align: justify;
+    text-justify: inter-word;
+    top: 0px;
+  }
+  /*# sourceMappingURL=unsupervise.css.map */
