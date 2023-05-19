@@ -1153,6 +1153,14 @@ html, body {
   opacity: 0;
   animation: ImageFadeIn 1.5s 1.4s forwards;
 }
+.Four.active .card__image_1 {
+  height: 60%;
+  width: 100%;
+  padding-top: 0px;
+  opacity: 0;
+  animation: ImageFadeIn 1.5s 1.4s forwards;
+}
+
 
 .Four.active .card__title {
   color: whitesmoke;
@@ -1252,6 +1260,14 @@ html, body {
   
   .Four.active .card__image {
     
+    padding-top: 0px;
+    opacity: 0;
+    animation: ImageFadeIn 1.5s 1.4s forwards;
+  }
+  
+    .Four.active .card__image_1 {
+    height: 60%;
+    width: 100%;
     padding-top: 0px;
     opacity: 0;
     animation: ImageFadeIn 1.5s 1.4s forwards;
