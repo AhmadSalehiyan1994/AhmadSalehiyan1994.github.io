@@ -1,0 +1,219 @@
+</html>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- main CSS -->
+        <link rel="stylesheet" href="./css/integer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+        <meta name="apple-mobile-web-app-title" content="CodePen">
+        <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet"> 
+        <!--Important link source from https://bootsnipp.com/snippets/ooa9M-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+>
+
+       <title>Ahmad Salehiyan</title>
+
+    </head>
+
+    <body class="dark">
+
+
+        <section id="first" class="first">
+            <div class="container-fluid p-0">
+     
+                        <div class="col-12 p-0">
+                        <h3 class="page_content">Integer Programming</h3>
+                        <img class="image_content" src="./Blog/INT.png" alt="">
+
+                   
+
+               
+            </div>
+
+        </div>
+        </section>
+
+
+
+        <section id="second" class="second">
+            <div class="container-fluid mt-0 m-0 p-0">
+                <div class="row">
+
+                    <div class="col-11">
+                        <h3 class="header text-white">What is integer programming?</h3>
+                            <p class="context text-white">
+                                    Integer programming expresses the optimization of a linear function subject to a set of linear constraints over integer variables.
+                                    <br>
+                                    The statements presented in Linear programming: a production planning example are all linear programming models. However, linear programs with very large numbers of variables and constraints can be solved efficiently. Unfortunately, this is no longer true when the variables are required to take integer values. Integer programming is the class of problems that can be expressed as the optimization of a linear function subject to a set of linear constraints over integer variables. It is in fact NP-hard. More important, perhaps, is the fact that the integer programs that can be solved to provable optimality in reasonable time are much smaller in size than their linear programming counterparts. There are exceptions, of course, and this documentation describes several important classes of integer programs that can be solved efficiently, but users of OPL should be warned that discrete problems are in general much harder to solve than linear programs.
+                            </p>                        
+                        <h3 class="header text-white">Solve optimization problems with integer constraints</h3>
+                            <p class="context text-white">
+                                Integer programming algorithms minimize or maximize a function subject to equality, inequality, and integer constraints. Integer constraints restrict some or all of the variables in the optimization problem to take on only integer values. This enables accurate modeling of problems involving discrete quantities (such as shares of a stock) or yes-or-no decisions. When there are integer constraints on only some of the variables, the problem is called a mixed-integer program (MIP). Example integer programming problems include portfolio optimization in finance, optimal dispatch of generating units (unit commitment) in energy production, design optimization in engineering, and scheduling and routing in transportation and supply chain applications.
+                                <br>
+                                <br>
+                                Integer programming is the mathematical problem of finding a vector <span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">x</span> that minimizes the function:
+
+                                <br>
+                                <br>
+                            
+
+                            </p>    
+                        <h3 class="header text-white">CLASSICAL SOLUTION APPROACHES</h3>
+                            <p class="context text-white">
+                                This section introduces three classical approaches for solving integer programs, namely, branch-and-bound, cutting plane, and Benders decomposition. Although all approaches are capable of solving integer programs, their degrees of success vary in software implementation.
+                                <br>
+                                <br>
+                            </p>
+                                
+                                <ul class="a">
+                                  <li  class="header text-white">Branch-And-Bound Approach</li>
+                                  <p class="context text-white">
+                                    Branch-and-bound is a general-purpose approach capable of solving pure IP, mixed IP, and binary IP problems. For ease of exposition, sometimes we shall assume that the given problem is a pure IP problem because a similar algorithm can be applied to a mixed or binary IP problem. We also assume that the given problem is a maximization problem because modification of the algorithm for the minimization problem is straightforward.s
+                                    <br>
+                                    <p class="context text-white">The method was first proposed by <a href="wiki/Ailsa_Land" title="Ailsa Land">Ailsa Land</a> and <a href="/wiki/Alison_Harcourt" title="Alison Harcourt">Alison Doig</a> whilst carrying out research at the <a href="/wiki/London_School_of_Economics" title="London School of Economics">London School of Economics</a> sponsored by <a href="/wiki/BP" title="BP">British Petroleum</a> in 1960 for <a href="/wiki/Discrete_optimization" title="Discrete optimization">discrete programming</a>,<sup id="cite_ref-2" class="reference"></sup> and has become the most commonly used tool for solving <a href="/wiki/NP-hard" class="mw-redirect" title="NP-hard">NP-hard</a> optimization problems. The name "branch and bound" first occurred in the work of Little <i>et al.</i> on the <a href="/wiki/Traveling_salesman_problem" class="mw-redirect" title="Traveling salesman problem">traveling salesman problem</a>.<sup id="cite_ref-little_4-0" class="reference"><a href="#cite_note-little-4">[4]</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> Branch and bound methods do not go deep like <a href="/wiki/Depth-first_search" title="Depth-first search">Depth-first search</a>; the first direction is lateral movement in the tree similar to <a href="/wiki/Breadth-first_search" title="Breadth-first search">Breadth-first search</a> (BFS). <br>
+                                        <span>To download GAMs file click <a href="./GAMs File/Branch and bound.gms" download>here.</a></span>
+                                     
+                                    </p>
+                                    </p>
+                                    <li  class="header text-white">Dantzig-Wolfe decomposition</li>
+                                    <p class="context text-white">
+                                        Dantzig-Wolfe decomposition as applied to an integer program is a specific form of problem reformulation that aims at providing a tighter linear programming relaxation bound. The reformulation gives rise to an integer master problem, whose typically large number of variables is dealt with implicitly by using an integer programming column generation procedure, also known as branch-and-price algorithm. There is a large class of integer programs that are well suited for this solution technique. In this paper, we propose to base the Dantzig-Wolfe decomposition of an integer program on the discretization of the integer polyhedron associated with a subsystem of constraints (as opposed to its convexification).
+                                        <br>
+                                        <span>To download GAMs file click <a href="./GAMs File/dw.gms" download>here.</a></span>
+                                      </p>
+                                  <li  class="header text-white">Cutting Plane Approach</li>
+                                  <p class="context text-white">
+                                    In geometry, an equation in two variables is called a plane and an equation in n variables a hyperplane, strictly speaking. For simplicity, however, both in practice are often referred to as a plane, regardless of the number of variables. Strictly speaking, an inequality constraint in n variables is called a half-space, not a hyperplane. But an inequality constraint can always be converted to an equation by adding or subtracting a nonnegative slack variable. The term cutting plane is often used for an equality or inequality constraint that can cut off a fractional part of an LP feasible region, without excluding any integer feasible solution. In the cutting plane approach, one or more such cutting planes are added to the current LP simplex tableau, which in turn are resolved for a new LP optimum. This process is repeated until the prescribed integer requirements are satisfied. In this text, the collection of all such cutting plane methods will be called a cutting plane approach (more specifically, a dual cutting plane approach, due to the use of the dual simplex method for LP reoptimization).
+                                    <br>
+                                    <p class="context text-white">Cutting planes were proposed by <a href="/wiki/Ralph_E._Gomory" title="Ralph E. Gomory">Ralph Gomory</a> in the 1950s as a method for solving integer programming and mixed-integer programming problems. However, most experts, including Gomory himself, considered them to be impractical due to numerical instability, as well as ineffective because many rounds of cuts were needed to make progress towards the solution.  Things turned around when in the mid-1990s <a href="/wiki/G%C3%A9rard_Cornu%C3%A9jols" title="Gérard Cornuéjols">Gérard Cornuéjols</a> and co-workers showed them to be very effective in combination with <a href="/wiki/Branch_and_bound" title="Branch and bound">branch-and-bound</a> (called <a href="/wiki/Branch_and_cut" title="Branch and cut">branch-and-cut</a>) and ways to overcome numerical instabilities.  Nowadays, all commercial MILP solvers use Gomory cuts in one way or another. Gomory cuts are very efficiently generated from a simplex tableau, whereas many other types of cuts are either expensive or even NP-hard to separate.  Among other general cuts for MILP, most notably <a href="/w/index.php?title=Lift-and-project&amp;action=edit&amp;redlink=1" class="new" title="Lift-and-project (page does not exist)">lift-and-project</a> dominates Gomory cuts.
+                                    </p>
+                                    <p class="context text-white">
+                                    A large variety of cutting plane methods were developed during the 1950s and 1960s. Among them, the most prominent ones belong to the class of dual cutting plane approach such as the fractional and mixed cutting plane methods developed by Gomory. This class shares a common solution algorithm when they are utilized as a stand-alone solver.  
+                                    </p>
+                                    <ul class="context text-white no-bullets">
+                                        <hr>
+                                        <li><p class="context text-white fw-bold">* Step 1:                                         
+                                                Solve the integer program as if it were a linear program. If it is infeasible,
+                                                so is the integer program and then stop. Else if an LP optimal solution
+                                                satisfying the integer requirements is found, then the IP is solved. Otherwise,
+                                                go to step 2.                                        </p> 
+                                        </li>
+                                        <hr>
+                                        <li><p class="context text-white fw-bold">* Step 2:
+                                            Select a row to be a generating row (or source row) from the LP optimum
+                                            simplex tableau.</p> 
+                                        </li>
+                                        <hr>
+                                        <li><p class="context text-white fw-bold">* Step 3:Derive a cut constraint from the generating row and augment it to the current tableau, resulting in a primal infeasible solution.</p>
+                                      </li>
+                                      <hr>
+                                        <li><p class="context text-white fw-bold">* Step 4: Apply the dual simplex method to reoptimize the augmented linear program. If the new LP optimum satisfies the integer requirements, the original MIP program is solved. Otherwise, go to step 2.
+                                        </p> 
+                                        </li>
+                                        <hr>
+                                    </ul>
+                                    </p>
+                                  <li  class="header text-white">Benders Decomposition Approach</li>
+                                  <p class="context text-white">
+                                        <p class="context text-white" >Benders decomposition (or Benders' decomposition)  is a technique in mathematical programming that allows the solution of very large <a href="https://en.wikipedia.org/wiki/Linear_programming" title="Linear programming">linear programming</a> problems that have a special <a href="https://en.wikipedia.org/wiki/Block_matrix" title="Block matrix">block structure</a>. This block structure often occurs in applications such as <a href="https://en.wikipedia.org/wiki/Stochastic_programming#:~:text=In%20the%20field%20of%20mathematical,but%20follow%20known%20probability%20distributions." title="Stochastic programming">stochastic programming</a> as the uncertainty is usually represented with scenarios. The technique is named after <a href="https://en.wikipedia.org/wiki/Jacques_F._Benders" title="Jacques F. Benders">Jacques F. Benders</a>.  
+                                        </p>                               
+                                        
+                                        <p class="context text-white" >                                     
+                                        The strategy behind Benders decomposition can be summarized as <i>divide-and-conquer</i>. That is, in Benders decomposition, the variables of the original problem are divided into two subsets so that a first-stage master problem is solved over the first set of variables, and the values for the second set of variables are determined in a second-stage subproblem for a given first-stage solution. If the subproblem determines that the fixed first-stage decisions are in fact infeasible, then so-called <i>Benders cuts</i> are generated and added to the master problem, which is then re-solved until no cuts can be generated. Since Benders decomposition adds new <i>constraints</i> as it progresses towards a solution, the approach is called "<i>row</i> generation". <br>
+                                        <span>To download GAMs file click <a href="./GAMs File/bendrs.gms" download>here.</a></span>
+                                        </p>
+                                     
+                                        
+                                       
+                                    </p>
+
+                                
+                                </ul>
+
+
+                             
+                    </div>  
+
+                    <div class="col-3 p-0">
+
+                    </div>
+>
+                 
+                </div>
+               
+            </div>
+
+
+        </section>
+
+
+
+        <footer id="footer" class="footer">
+            <div class="row">
+                <div class="f_about col-lg-4 col-sm-12">
+                    <div class="contact_about_card">
+                        <img class="contact_image" src="./images/contact_img.png">
+                    </div>                        
+                        <p class="f_name">Ahmad Salehiyan</p>
+                     
+                        <p class="f_job">Industrial Engineer</p>
+
+                    
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <h1 class="Contact fw-bold order-sm-3 order-lg-2">Contact With Me:</h1>
+                    <div id="social-platforms" class="social-platforms mt-4 ">                          
+                        <a class="btn btn-icon btn-telegram hvr-grow" href="https://t.me/AhmadSalehiyan"><i class="fa fa-telegram"></i><span>Telegram</span></a>
+                        <a class="btn btn-icon btn-whatsApp  hvr-grow" href="https://wa.me/989398006775"><i class="fa fa-whatsApp"></i><span>WhatsApp</span></a>
+                        <a class="btn btn-icon btn-linkedin  hvr-grow" href="http://www.linkedin.com/in/ahmad-salehiyan"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                        </div>
+                    <div class="copy_text">
+                        <p class="copy  text-white"><span>&#174;</span> Ahmad Salehiyan All Rights Reserved.</p>
+                    </div>
+
+                </div>
+                <div class="Contact_way col-lg-4 col-sm-12">
+                    <h6 class="text_contact fw-bold">
+                        Contact
+                      </h6>
+                          <a href="mailto: Ahamd.Salehiyan@okstate.edu" class="contact_ican_email pb-3"><i class="bi bi-envelope"></i><span>  Ahamd.Salehiyan@okstate.edu</span></i></a>
+                          <a href="tel:+405 269 3549" class="contact_ican_call"><i class="bi bi-telephone"></i><span>  +405 269 3549</span></a>
+                </div>
+                
+
+
+            </div>
+
+
+
+
+
+
+    </footer>
+
+
+        
+        
+
+          
+
+
+
+    </body>
+
+  
+</html>
+
+
